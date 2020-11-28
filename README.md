@@ -17,4 +17,3 @@ Various categories are included.
   If you are willing to contribute on this app let's discuss on our telegram group.
   [Telegram Group](https://t.me/joinchat/OKSLQBoBNquemTZD4gO9sQ)
   Please leave a star if you like this repository.
-
