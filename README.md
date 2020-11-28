@@ -1,7 +1,7 @@
 # Multiplayer Quiz App
 
 This is a multi player quiz app. Play along with your friends in real time and challenge everyone.
-Various categories are included.
+Various categories are included. Coming soon on Google Play.
 
 
 
