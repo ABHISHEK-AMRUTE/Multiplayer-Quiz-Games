@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start" >
+        <Constraint
+            android:layout_height="180dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/view"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/floatingActionButton2"
+            motion:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            motion:layout_constraintStart_toStartOf="@+id/textInputLayout"
+            android:layout_marginTop="32dp" />
+        <Constraint
+            android:id="@+id/floatingActionButton2"
+            motion:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            motion:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            motion:layout_constraintStart_toStartOf="@+id/textInputLayout"
+            android:layout_marginTop="32dp" />
+        <Constraint
+            android:id="@+id/floatingActionButton2"
+            motion:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            motion:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            motion:layout_constraintStart_toStartOf="@+id/textInputLayout"
+            android:layout_marginTop="32dp" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end" >
+        <Constraint
+            android:layout_height="2000dp"
+            android:layout_width="match_parent"
+            android:id="@+id/view"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/button"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            motion:layout_constraintHorizontal_bias="0.498" >
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="0" />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        android:id="@+id/main_tran"
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:autoTransition="none"
+        motion:duration="500">
+
+        <OnClick motion:targetId="@+id/floatingActionButton2" />
+    </Transition>
+    <ConstraintSet
+        android:id="@+id/showcase"
+        motion:deriveConstraintsFrom="@+id/end" >
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="0dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/button"
+            motion:layout_constraintTop_toBottomOf="@+id/view" >
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="8" />
+        </Constraint>
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/button2" >
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="0" />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        android:id="@+id/show_case"
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/showcase" >
+        <OnClick motion:targetId="@+id/button" />
+    </Transition>
+</MotionScene>

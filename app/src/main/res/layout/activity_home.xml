@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    app:layoutDescription="@xml/activity_home_scene"
+    tools:context=".Home">
+
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/framelayout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:visibility="gone">-->
+
+    <!--    </FrameLayout>-->
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="?attr/colorPrimary"-->
+<!--        android:minHeight="?attr/actionBarSize"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/theme_color"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/theme_color"
+        app:tabTextAppearance="@style/tabtext"
+        app:tabTextColor="#3C3C3C">
+
+        <!--        <com.google.android.material.tabs.TabItem-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:text="Games">-->
+
+        <!--        </com.google.android.material.tabs.TabItem>-->
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_layout" />
+
+<!--        <com.google.android.material.bottomappbar.BottomAppBar-->
+<!--            android:id="@+id/bottomAppBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            app:backgroundTint="@color/white"-->
+<!--            app:hideOnScroll="true"-->
+<!--            app:fabCradleRoundedCornerRadius="30dp"-->
+
+<!--            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"-->
+<!--            app:navigationIcon="@drawable/ic_baseline_menu_24"-->
+<!--            app:menu="@menu/sample_menu"-->
+<!--            />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fab"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="@color/colorPrimary"-->
+<!--            app:layout_anchor="@id/bottomAppBar"-->
+<!--            app:srcCompat="@drawable/ic_baseline_home_24"-->
+<!--            app:tint="#FFFFFF" />-->
+</RelativeLayout>

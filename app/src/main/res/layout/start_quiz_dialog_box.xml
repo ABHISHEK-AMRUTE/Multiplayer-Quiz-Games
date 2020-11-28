@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:id="@+id/admin"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="16dp">
+
+           <TextView
+               android:id="@+id/textView19"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:fontFamily="@font/roboto"
+               android:text="Questions"
+               android:textColor="@color/navigationbar_color"
+               android:textSize="18sp"
+               android:textStyle="bold" />
+
+           <TextView
+               android:id="@+id/textView20"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="4dp"
+               android:fontFamily="@font/roboto"
+               android:text="To play quiz:\n\n1. First fetch the questions.\n2. Start quiz when all members are ready."
+               android:textColor="#151515"
+               android:textSize="14sp" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="16dp"
+               android:orientation="horizontal">
+
+               <Button
+                   android:id="@+id/fetch"
+                   style="@style/Widget.MaterialComponents.Button.TextButton"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:enabled="true"
+                   android:text="Get Questions" />
+
+               <Button
+                   android:id="@+id/startGame"
+                   android:enabled="true"
+                   style="@style/Widget.MaterialComponents.Button.TextButton"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:fontFamily="@font/roboto"
+                   android:text="Start Quiz" />
+           </LinearLayout>
+
+           <ProgressBar
+               android:id="@+id/progressBar2"
+               style="?android:attr/progressBarStyleHorizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#ECE8E8"
+               android:foregroundTint="@color/colorPrimary"
+               android:indeterminate="true"
+               android:indeterminateTint="@color/colorPrimary"
+               android:progressTint="@color/colorPrimary"
+               android:secondaryProgressTint="#FFFFFF"
+               android:visibility="gone" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/nonAdmin"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="16dp">
+
+           <ProgressBar
+               android:id="@+id/progressBar"
+               style="?android:attr/progressBarStyle"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="16dp" />
+
+           <TextView
+               android:id="@+id/textView2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="4dp"
+               android:layout_marginBottom="16dp"
+               android:text="Waiting for admin to start..."
+               android:textAlignment="center" />
+       </LinearLayout>
+   </LinearLayout>
+</androidx.cardview.widget.CardView>

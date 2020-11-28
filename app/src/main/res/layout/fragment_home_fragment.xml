@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home_fragment">
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:padding="8dp">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/create_lobby"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="70dp"-->
+    <!--            android:layout_weight="1"-->
+
+    <!--            android:background="@drawable/create_lobby_button"-->
+
+    <!--            android:text="Create Lobby"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="16sp" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/join_lobby"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="70dp"-->
+    <!--            android:layout_weight="1"-->
+
+    <!--            android:background="@drawable/join_lobby_button"-->
+    <!--            android:text="Join Lobby"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="16sp" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/join_layout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="8dp"-->
+    <!--        android:background="@drawable/create_lobby_section"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:padding="8dp">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Creating Lobby" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/roomname"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:ems="10"-->
+    <!--            android:inputType="textPersonName"-->
+    <!--            android:text="Enter Lobby Name" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/join_room"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="join lobby" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/host_room"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="create lobby" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:padding="8dp">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/members"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Members Joined so far:" />-->
+    <!--    </LinearLayout>-->
+
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="8dp"-->
+    <!--            android:elevation="4dp"-->
+    <!--            app:cardCornerRadius="4dp">-->
+
+    <!--            <include-->
+    <!--                layout="@layout/quiz_home_fragment_tab"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent" />-->
+    <!--        </androidx.cardview.widget.CardView>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Categories"
+            android:textColor="#585858"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/nature"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/forest" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Nature"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/math"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_abacus" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Mathematics"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/film"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_clapperboard" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Film"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/music"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_music_notes" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Music"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/video_games"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_game_controller" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Video Games"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/board_games"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_chess_game" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Board Games"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mythology"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_zeus" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Mythology"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sports"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_fitness" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Sports"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/geography"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_worldwide" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Geography"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_history__1_" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="History"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/politics"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_politician" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Politics"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/arts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_tools" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Arts"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/celebs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_man" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Celebrities"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/animals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_lion" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Animals"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/vehicals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_car" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Vehicles"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/books"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_book" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Books"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/theators"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="65dp"
+
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_cinema"
+                        app:layout_constraintCircleRadius="50dp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Theatres"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_tv_app" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Television"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/computer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:rippleColor="#D2E65100"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_laptop_screen" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Computers"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                app:rippleColor="#D2E65100"
+                android:clickable="true"
+                android:background="#FFFFFF"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_abacus" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Mathematics"
+                        android:textAlignment="center"
+                        android:textColor="#373737"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

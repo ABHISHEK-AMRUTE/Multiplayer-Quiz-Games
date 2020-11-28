@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#03A9F4</color>
+    <color name="navigationbar_color">#004EB4</color>
+    <color name="touch_correct_option">#6BF85C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="theme_color">#E65100</color>
+</resources>

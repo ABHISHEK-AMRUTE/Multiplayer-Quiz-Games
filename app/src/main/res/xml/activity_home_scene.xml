@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="200">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/menu" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/scrollView2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="foreground"
+                motion:customColorDrawableValue="@color/cardview_shadow_end_color" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/floatingActionButton3"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp">
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView"
+            android:elevation="8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="8" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/scrollView2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="foreground"
+                motion:customColorDrawableValue="@color/cardview_shadow_start_color" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/floatingActionButton3"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp">
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="8" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/cardView"
+            android:elevation="8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="8" />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        android:id="@+id/go_back"
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/start" >
+        <OnClick motion:targetId="@+id/close" />
+    </Transition>
+    <ConstraintSet
+        android:id="@+id/join_room_state"
+        motion:deriveConstraintsFrom="@+id/start" >
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/cardView"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" />
+
+    </ConstraintSet>
+    <Transition
+        android:id="@+id/go_join_the_room"
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/join_room_state"
+        motion:motionInterpolator="linear">
+        <OnClick motion:targetId="@+id/floatingActionButton3" />
+    </Transition>
+    <Transition
+        android:id="@+id/go_back_from_join_the_room"
+        motion:constraintSetStart="@+id/join_room_state"
+        motion:constraintSetEnd="@+id/start" >
+        <OnClick motion:targetId="@+id/imageView" />
+    </Transition>
+</MotionScene>

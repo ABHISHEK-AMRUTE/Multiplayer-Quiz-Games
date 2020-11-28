@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/join_room" >
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/textView4"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" />
+        <Constraint
+            motion:layout_constraintStart_toEndOf="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/textView5"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp" />
+        <Constraint
+            android:layout_height="30dp"
+            motion:layout_constraintBottom_toTopOf="@+id/textView5"
+            android:layout_width="30dp"
+            android:id="@+id/imageView10"
+            motion:layout_constraintEnd_toEndOf="@+id/textView5"
+            motion:layout_constraintStart_toStartOf="@+id/textView5" >
+            <CustomAttribute
+                motion:attributeName="rotation"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="8" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/constraintLayout2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/constraintLayout" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/start">
+
+
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/constraintLayout" />
+        <Constraint
+            android:id="@+id/constraintLayout2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="1500dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/linearLayout2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" >
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="0" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/textView4"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" />
+        <Constraint
+            android:id="@+id/constraintLayout2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/imageView10"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toTopOf="@+id/textView5"
+            motion:layout_constraintEnd_toEndOf="@+id/textView5"
+            motion:layout_constraintStart_toStartOf="@+id/textView5" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:id="@+id/textView5"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/constraintLayout2">
+            <CustomAttribute
+                motion:attributeName="visibility"
+                motion:customIntegerValue="8" />
+        </Constraint>
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/join_room" >
+        <OnClick motion:targetId="@+id/start_game_but" />
+    </Transition>
+    <Transition
+        android:id="@+id/view_to_view"
+        motion:constraintSetStart="@+id/join_room"
+        motion:constraintSetEnd="@+id/end" >
+        <OnSwipe motion:touchAnchorId="@+id/constraintLayout2" />
+    </Transition>
+    <ConstraintSet
+        android:id="@+id/refresh"
+        motion:deriveConstraintsFrom="@+id/join_room" >
+        <Constraint
+            android:id="@+id/imageView10"
+            motion:layout_constraintEnd_toEndOf="@+id/textView5"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            motion:layout_constraintBottom_toTopOf="@+id/textView5"
+            android:rotation="90"
+            motion:layout_constraintStart_toStartOf="@+id/textView5" />
+    </ConstraintSet>
+    <Transition
+        android:id="@+id/refresh_anim"
+        motion:constraintSetStart="@+id/join_room"
+        motion:constraintSetEnd="@+id/refresh" >
+        <OnClick motion:targetId="@+id/imageView10" />
+    </Transition>
+    <Transition
+        android:id="@+id/refresh_anim"
+        motion:constraintSetStart="@+id/refresh"
+        motion:constraintSetEnd="@+id/join_room"
+        motion:autoTransition="animateToEnd" />
+
+</MotionScene>
