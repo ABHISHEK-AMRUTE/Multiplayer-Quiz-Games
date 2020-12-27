@@ -54,7 +54,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/pp" />
+            android:src="@drawable/ic_man" />
     </androidx.cardview.widget.CardView>
 
     <TextView
