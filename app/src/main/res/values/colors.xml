@@ -7,4 +7,7 @@
     <color name="touch_correct_option">#6BF85C</color>
     <color name="white">#FFFFFF</color>
     <color name="theme_color">#E65100</color>
+    <color name="dark_blue">#03009D</color>
+    <color name="option_background">#E9E9F5</color>
+    <color name="incorrect_answer">#F0FB3F3F</color>
 </resources>

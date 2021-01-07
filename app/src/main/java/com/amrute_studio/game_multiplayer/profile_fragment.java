@@ -1,13 +1,9 @@
 package com.amrute_studio.game_multiplayer;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.motion.widget.MotionController;
-import androidx.constraintlayout.motion.widget.MotionLayout;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -53,7 +49,7 @@ public class profile_fragment extends Fragment {
         members =  getView().findViewById(R.id.members);
 
         join_room= getView().findViewById(R.id.join_room);
-        host_room = getView().findViewById(R.id.host_room);
+        host_room = getView().findViewById(R.id.button5);
 
         createLinearlayout = getView().findViewById(R.id.createRoomLinearLayout);
         joinLinearLayout = getView().findViewById(R.id.joinRoomLinearLayout);

@@ -44,7 +44,7 @@ public class PlayQuiz extends AppCompatActivity {
     String url ;
 
     CardView one,two,three,four;
-    TextView score_list,question,optiona,optionb,optionc,optiond,time_field;
+    TextView score_list,question,optiona,optionb,optionc,optiond,time_field,numberOfQuestion, scoreTextField;
 
     socket_connections isocket;
     Socket socket;
@@ -61,6 +61,8 @@ public class PlayQuiz extends AppCompatActivity {
     int question_number =0 ;
     String myname;
 
+
+    int localScore = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,6 +124,8 @@ public class PlayQuiz extends AppCompatActivity {
         optionc = findViewById(R.id.option_3);
         optiond = findViewById(R.id.option_4);
         time_field = findViewById(R.id.timer);
+        numberOfQuestion = findViewById(R.id.numnerOfQuestion);
+        scoreTextField = findViewById(R.id.scoreTextField);
 
         one = findViewById(R.id.one);
         two = findViewById(R.id.two);
@@ -169,8 +173,8 @@ public class PlayQuiz extends AppCompatActivity {
 
             @Override
             public void onTick(long millisUntilFinished) {
-                if(counter==time)time_field.setTextColor(Color.parseColor("#FFFFFF"));
-                if(counter==30)time_field.setTextColor(Color.YELLOW);
+
+                if(counter==30)time_field.setTextColor(Color.parseColor("#FF0505"));
                 if(counter==10)time_field.setTextColor(Color.RED);
                 time_field.setText(""+counter);
                 counter--;
@@ -178,6 +182,7 @@ public class PlayQuiz extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+
                        check_answer(5);
                        serve_question();
             }
@@ -303,7 +308,7 @@ public class PlayQuiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 check_answer(1);
-                one.setCardBackgroundColor(getResources().getColor(R.color.touch_correct_option));
+
 
             }
         });
@@ -312,7 +317,7 @@ public class PlayQuiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 check_answer(2);
-                two.setCardBackgroundColor(getResources().getColor(R.color.touch_correct_option));
+
             }
         });
 
@@ -320,7 +325,7 @@ public class PlayQuiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 check_answer(3);
-                three.setCardBackgroundColor(getResources().getColor(R.color.touch_correct_option));
+
             }
         });
 
@@ -328,7 +333,7 @@ public class PlayQuiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 check_answer(4);
-                four.setCardBackgroundColor(getResources().getColor(R.color.touch_correct_option));
+
             }
         });
 
@@ -384,18 +389,20 @@ public class PlayQuiz extends AppCompatActivity {
 
    private void serve_question(){
 
-        one.setCardBackgroundColor(getResources().getColor(R.color.white));
-        two.setCardBackgroundColor(getResources().getColor(R.color.white));
-        three.setCardBackgroundColor(getResources().getColor(R.color.white));
-        four.setCardBackgroundColor(getResources().getColor(R.color.white));
+        time_field.setTextColor(Color.BLACK);
+        one.setCardBackgroundColor(getResources().getColor(R.color.option_background));
+        two.setCardBackgroundColor(getResources().getColor(R.color.option_background));
+        three.setCardBackgroundColor(getResources().getColor(R.color.option_background));
+        four.setCardBackgroundColor(getResources().getColor(R.color.option_background));
         one.setEnabled(true);
         two.setEnabled(true);
         three.setEnabled(true);
         four.setEnabled(true);
+       numberOfQuestion.setText(question_number + "/" + question_array.size());
        if(question_number<question_array.size())
        {
            countDownTimer.cancel();
-           question.setText(Html.fromHtml(question_array.get(question_number)) );
+           question.setText(Html.fromHtml(question_array.get(question_number)));
            optiona.setText(Html.fromHtml(optiona_array.get(question_number)));
            optionb.setText(Html.fromHtml(optionb_array.get(question_number)));
            optionc.setText(Html.fromHtml(optionc_array.get(question_number)));
@@ -413,33 +420,41 @@ public class PlayQuiz extends AppCompatActivity {
             case 1:
                     if(correct_ans.get(question_number).matches(optiona_array.get(question_number))){
                         socket.emit("here-quiz-answer",roomname,myname,10);
+                        localScore +=10;
+                        one.setCardBackgroundColor(getResources().getColor(R.color.touch_correct_option));
                     }else
                     {
-
+                           one.setCardBackgroundColor(getResources().getColor(R.color.incorrect_answer));
                     }
                    break;
             case 2:
                     if(correct_ans.get(question_number).matches(optionb_array.get(question_number))){
                         socket.emit("here-quiz-answer",roomname,myname,10);
+                        localScore +=10;
+                        two.setCardBackgroundColor(getResources().getColor(R.color.touch_correct_option));
                     }else
                     {
-
+                        two.setCardBackgroundColor(getResources().getColor(R.color.incorrect_answer));
                     }
                    break;
             case 3:
                     if(correct_ans.get(question_number).matches(optionc_array.get(question_number))){
                         socket.emit("here-quiz-answer",roomname,myname,10);
+                        localScore +=10;
+                        three.setCardBackgroundColor(getResources().getColor(R.color.touch_correct_option));
                     }else
                     {
-
+                        three.setCardBackgroundColor(getResources().getColor(R.color.incorrect_answer));
                     }
                    break;
             case 4:
                     if(correct_ans.get(question_number).matches(optiond_array.get(question_number))){
                         socket.emit("here-quiz-answer",roomname,myname,10);
+                        localScore +=10;
+                        four.setCardBackgroundColor(getResources().getColor(R.color.touch_correct_option));
                     }else
                     {
-
+                        four.setCardBackgroundColor(getResources().getColor(R.color.incorrect_answer));
                     }
                    break;
 
@@ -451,7 +466,8 @@ public class PlayQuiz extends AppCompatActivity {
         two.setEnabled(false);
         three.setEnabled(false);
         four.setEnabled(false);
-       question_number++;
+        scoreTextField.setText(localScore+"");
+        question_number++;
 
 
    }

@@ -9,8 +9,8 @@
 
     </style>
    <style name="custom" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-       <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-       <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+       <item name="colorPrimaryDark">@color/dark_blue</item>
+       <item name="android:statusBarColor">@color/dark_blue</item>
    </style>
 
 
