@@ -24,6 +24,8 @@ android {
 }
 
 dependencies {
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.github.nkzawa:socket.io-client:0.6.0'

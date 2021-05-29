@@ -40,6 +40,7 @@ public class profile_fragment extends Fragment {
     ArrayList<playerData> list;
     RecyclerView recyclerView;
     playerNameAdapter adapter;
+    LinearLayout loadingLayout;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class profile_fragment extends Fragment {
 
         join_room= getView().findViewById(R.id.join_room);
         host_room = getView().findViewById(R.id.button5);
+        loadingLayout = getView().findViewById(R.id.loadingLayout);
 
         createLinearlayout = getView().findViewById(R.id.createRoomLinearLayout);
         joinLinearLayout = getView().findViewById(R.id.joinRoomLinearLayout);

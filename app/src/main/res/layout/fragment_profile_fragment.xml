@@ -217,6 +217,30 @@
         android:textAlignment="center"
         android:visibility="gone" />
 
+    <LinearLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="visible">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Hold on! getting room for you"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+    </LinearLayout>
     <TextView
         android:id="@+id/textView18"
         android:layout_width="match_parent"
